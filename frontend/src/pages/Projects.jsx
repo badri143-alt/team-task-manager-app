@@ -27,7 +27,7 @@ export default function Projects() {
     if (!form.name.trim()) return;
     setSaving(true);
     try {
-      await api.post('/projects', { name: form.name.trim(), description: form.description.trim() });
+      await api.post('/projects', { name: form.title.trim(), description: form.description.trim() });
       setOpen(false); setForm({ name: '', description: '' });
       await load();
     } catch (e) { setError(e.message); }
