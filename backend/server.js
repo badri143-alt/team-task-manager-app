@@ -13,8 +13,17 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://team-task-manager-app-eta.vercel.app"
+    ],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
+
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRoutes);
 app.use("/api/projects", projectRoutes);
