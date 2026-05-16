@@ -1,95 +1,116 @@
 # Team Task Manager
 
-A full-stack web application where teams can manage projects and tasks collaboratively.
+A full-stack team collaboration and task management web application built using React, Node.js, Express, and MongoDB.
 
-This project was built as part of a Full-Stack Developer Assessment. The application allows Admins to create projects, assign tasks to team members, and track progress through different task stages.
-
-Members can log in, view their assigned tasks, and update task status.
+This project was developed as part of a Full-Stack Developer Assessment. The application allows teams to manage projects, assign tasks, track progress, and collaborate using role-based access control.
 
 ---
 
-# Live Demo
+# Live Application
 
-Frontend: `Add Your Frontend URL`
+## Frontend (Vercel)
 
-Backend: `Add Your Backend URL`
+https://team-task-manager-app-eta.vercel.app
 
----
+## Backend API (Render)
 
-# Demo Video
-
-`Add Your Demo Video Link`
+https://team-task-manager-app-pyq6.onrender.com
 
 ---
 
 # GitHub Repository
 
-`Add Your GitHub Repository Link`
+https://github.com/badri143-alt/team-task-manager-app
 
 ---
 
-# What This Project Does
+# Demo Video
 
-This application helps teams organize work in one place.
+Add your demo video link here
 
-Example workflow:
+---
+
+
+# Application Screenshots
+
+![login page](screenshots/login-page.png)
+![admin-dashboard](screenshots/admin-dashboard.png)
+![task-creation](screenshots/create-taskproject.png)
+![member-dashboard](screenshots/member-dashboard.png)
+
+
+
+
+# Project Overview
+
+This application helps teams organize and track work efficiently.
+
+## Workflow
 
 1. Admin creates a project
 2. Admin adds team members
 3. Admin creates tasks
 4. Tasks are assigned to members
 5. Members update task progress
-6. Admin tracks overall progress from dashboard
+6. Admin tracks project progress from dashboard
 
 ---
 
-# Main Features
+# Features
 
-## User Authentication
+## Authentication
 
-* Signup
-* Login
+* User Signup
+* User Login
 * JWT Authentication
-* Forgot Password using Email
 * Protected Routes
+* Forgot Password via Email
+
+---
 
 ## Project Management
 
 * Create Projects
-* Add Members
-* Remove Members
 * View Project Details
+* Add Team Members
+* Remove Members
+
+---
 
 ## Task Management
 
 * Create Tasks
-* Assign Tasks
+* Assign Tasks to Members
 * Update Task Status
 * Delete Tasks
 * Set Due Dates
 * Set Priority Levels
+
+---
 
 ## Dashboard
 
 * Total Tasks
 * Tasks by Status
 * Overdue Tasks
-* Team Progress Tracking
+* Team Progress Overview
 
-## Role-Based Access
+---
 
-### Admin
+# Role-Based Access Control
 
-* Manage Projects
-* Manage Members
-* Create Tasks
-* Update Any Task
-* Delete Tasks
+## Admin
 
-### Member
+* Create and manage projects
+* Add or remove members
+* Create tasks
+* Update any task
+* Delete tasks
 
-* View Assigned Tasks
-* Update Assigned Task Status Only
+## Member
+
+* View assigned tasks
+* Update assigned task status only
 
 ---
 
@@ -108,7 +129,7 @@ Example workflow:
 * Express.js
 * MongoDB
 * Mongoose
-* JWT
+* JWT Authentication
 * Nodemailer
 
 ---
@@ -129,7 +150,7 @@ team-task-manager/
 
 # Frontend Setup
 
-## 1. Open frontend folder
+## 1. Navigate to frontend folder
 
 ```bash
 cd frontend
@@ -141,7 +162,13 @@ cd frontend
 npm install
 ```
 
-## 3. Start frontend server
+## 3. Create `.env` file
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+## 4. Start frontend server
 
 ```bash
 npm run dev
@@ -157,7 +184,7 @@ http://localhost:5173
 
 # Backend Setup
 
-## 1. Open backend folder
+## 1. Navigate to backend folder
 
 ```bash
 cd backend
@@ -170,8 +197,6 @@ npm install
 ```
 
 ## 3. Create `.env` file
-
-Add the following variables:
 
 ```env
 PORT=5000
@@ -232,16 +257,31 @@ DELETE /api/tasks/:id
 
 ---
 
-# Challenges I Faced
+# Deployment
 
-While building this project, I faced some issues such as:
+## Frontend Deployment
 
-* Task status update errors
-* Enum mismatch issues in MongoDB
-* Role-based access control bugs
-* Frontend and backend API connection problems
+Frontend is deployed using Vercel.
 
-I fixed these issues by debugging API routes, validating MongoDB schema values, and improving task update logic.
+## Backend Deployment
+
+Backend API is deployed using Render.
+
+Environment variables were configured separately for production deployment.
+
+---
+
+# Challenges Faced
+
+During development, I encountered several issues such as:
+
+* Task status update bugs
+* MongoDB enum validation errors
+* Role-based access issues
+* Frontend and backend API integration problems
+* Deployment configuration issues
+
+These problems were resolved through debugging API routes, validating schema values properly, and improving frontend-backend communication.
 
 ---
 
@@ -252,15 +292,8 @@ I fixed these issues by debugging API routes, validating MongoDB schema values, 
 * MongoDB Relationships
 * Role-Based Access Control
 * Full-Stack Debugging
-* Railway Deployment
-
----
-
-# Deployment
-
-The project is deployed using Railway.
-
-Frontend and backend are deployed separately and connected using environment variables.
+* Environment Variable Management
+* Frontend and Backend Deployment
 
 ---
 
@@ -282,4 +315,4 @@ Badrinath
 
 # License
 
-This project was created for educational and assessment purposes.
+This project was developed for educational and assessment purposes.
