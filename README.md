@@ -26,7 +26,7 @@ https://github.com/badri143-alt/team-task-manager-app
 
 # Demo Video
 
-Add your demo video link here
+https://drive.google.com/file/d/1Jwz9lxoB-Qa4ZdvBY0LfIbFpFGLFODBs/view?usp=sharing
 
 ---
 
@@ -165,7 +165,7 @@ npm install
 ## 3. Create `.env` file
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_BASE_URL=http://localhost:5000/api         
 ```
 
 ## 4. Start frontend server
